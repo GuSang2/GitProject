@@ -2,8 +2,14 @@
 
 
 #include "EnemyAIController_Base.h"
+#include "Perception/AIPerceptionComponent.h"
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
+
+AEnemyAIController_Base::AEnemyAIController_Base()
+{
+
+}
 
 void AEnemyAIController_Base::StopBehaviorTree()
 {
@@ -38,5 +44,10 @@ void AEnemyAIController_Base::OnPossess(APawn* InPawn)
 			}
 		}
 	}
+}
+
+void AEnemyAIController_Base::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
+{
+
 }
 
